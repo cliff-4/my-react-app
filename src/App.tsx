@@ -3,7 +3,11 @@ import Alert from "./components/Alert";
 
 function App() {
   let alertprops = {
-    content: "Amber content",
+    content: (
+      <>
+        Amber alert <h1>Serious</h1>
+      </>
+    ),
   };
 
   let cities = {
