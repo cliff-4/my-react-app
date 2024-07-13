@@ -1,19 +1,41 @@
-let items: string[] = [
-  "First Item",
-  "Second Item",
-  "Third Item",
-  "Bazinga",
-  "Fourth Item",
-];
+import { useState } from "react";
 
-function ListGroup() {
+interface ListGroupProps {
+  items: string[];
+  heading: string;
+  onSelectItem: (item: string) => void;
+}
+
+function ListGroup({ items, heading, onSelectItem }: ListGroupProps) {
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  function handleOnClick(index: number) {
+    if (selectedIndex !== index) setSelectedIndex(index);
+    else setSelectedIndex(-1);
+  }
+
   return (
     <>
-      <ul className="list-group"></ul>
-      {items.map((item) => (
-        <li key={item}>{item}</li>
-      ))}
-      <p>end of discussion.</p>
+      <h2>{heading}</h2>
+      {items.length === 0 && <p>No items found</p>}
+      <ul className="list-group">
+        {items.map((item, index) => (
+          <li
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
+            key={item}
+            onClick={() => {
+              onSelectItem(item);
+              handleOnClick(index);
+            }}
+          >
+            {item}
+          </li>
+        ))}
+      </ul>
     </>
   );
 }
