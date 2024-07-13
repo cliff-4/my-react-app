@@ -1,6 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
-import ChangingButton from "./components/Button";
+import ChangingButton from "./components/ChangingButton";
 
 function App() {
   let alertprops = {
