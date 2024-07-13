@@ -22,6 +22,7 @@ const Alert = ({ children }: AlretProp) => {
   const alertUpdateHandler = () => {
     currAlertType = (currAlertType + 1) % alertTypes.length;
     setAlertType(alertTypes[currAlertType]);
+    console.log(`Update type set to '${alertTypes[currAlertType]}'`);
   };
 
   return (
