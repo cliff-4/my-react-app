@@ -1,7 +1,8 @@
-import { ReactNode, useState } from "react";
+import { ReactNode } from "react";
 
 interface AlretProp {
   children: ReactNode;
+  onClose: () => void;
 }
 
 let alertTypes = [
@@ -14,20 +15,21 @@ let alertTypes = [
   "warning",
   "info",
 ];
-let currAlertType = 0;
 
-const Alert = ({ children }: AlretProp) => {
-  const [alertType, setAlertType] = useState(alertTypes[currAlertType]);
-
-  const alertUpdateHandler = () => {
-    currAlertType = (currAlertType + 1) % alertTypes.length;
-    setAlertType(alertTypes[currAlertType]);
-    console.log(`Update type set to '${alertTypes[currAlertType]}'`);
-  };
-
+const Alert = ({ children, onClose }: AlretProp) => {
   return (
-    <div className={`alert alert-${alertType}`} onClick={alertUpdateHandler}>
+    <div
+      className={`alert alert-${alertTypes[2]} alert-dismissible`}
+      role="alert"
+    >
       {children}
+      <button
+        type="button"
+        className="btn-close"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+        onClick={onClose}
+      ></button>
     </div>
   );
 };
