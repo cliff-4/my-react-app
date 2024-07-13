@@ -1,4 +1,5 @@
 import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 let name: string = "Aditya";
 name = "";
@@ -23,7 +24,7 @@ function App() {
   if (name) content = <h1>Hello! My name is {name}</h1>;
   else content = <h1>Hello there!</h1>;
   return (
-    <div>
+    <>
       {content}
       <ListGroup
         items={defaults.items}
@@ -35,7 +36,10 @@ function App() {
         heading={cities.heading}
         onSelectItem={onSelectItemHandler}
       />
-    </div>
+      <Alert>
+        123 <h1>456</h1>
+      </Alert>
+    </>
   );
 }
 
