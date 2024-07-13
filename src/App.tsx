@@ -1,5 +1,6 @@
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import ChangingButton from "./components/Button";
 
 function App() {
   let alertprops = {
@@ -19,6 +20,7 @@ function App() {
     <>
       <ListGroup items={cities.items} heading={cities.heading} />
       <Alert>{alertprops.content}</Alert>
+      <ChangingButton />
     </>
   );
 }
