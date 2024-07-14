@@ -1,9 +1,9 @@
-import AlertButton from "./components/AlertButton";
+import TodoList from "./TodoList";
 
 function App() {
   return (
     <>
-      <AlertButton>Obi wan kenobi!</AlertButton>
+      <TodoList></TodoList>
     </>
   );
 }
