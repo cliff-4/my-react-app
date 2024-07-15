@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import palette from './src/palette.js'
+
 export default {
   mode: 'jit',
   content: [
@@ -7,13 +9,7 @@ export default {
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#240115', // dark-purple
-        secondary: '#de3c4b', // rusty-red
-        tertiary: '#87f5fb', // electric-blue
-        quarternary: '#2f131e', // dark-purple-2
-        quinternary: '#cec3c1', // silver
-      }
+      colors: palette
     },
   },
   plugins: [],
