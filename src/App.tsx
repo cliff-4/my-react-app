@@ -2,10 +2,11 @@ import { useState } from "react";
 import Sidebar from "./components/sidebar";
 import TodoList from "./components/TodoList";
 import DefaultPage from "./components/DefaultPage";
+import Home from "./components/Home";
 
 function App() {
   const Pages = [
-    <DefaultPage content={"Home page"} />,
+    <Home />,
     <TodoList />,
     <DefaultPage content={"Page 3"} />,
     <DefaultPage content={"Page 4"} />,
@@ -13,8 +14,8 @@ function App() {
 
   const [pageIndex, setPageIndex] = useState(0);
   return (
-    <div className="flex-row">
-      <Sidebar pageSetter={setPageIndex} />
+    <div className="min-h-screen min-w-screen bg-primary">
+      <Sidebar pageSetter={setPageIndex} activeIndex={pageIndex} />
       {Pages[pageIndex]}
     </div>
   );

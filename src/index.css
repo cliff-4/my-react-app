@@ -23,4 +23,7 @@
       text-lg font-mono font-bold tracking-widest
       transition-all duration-200 scale-0 origin-left hover:translate-x-5;
   }
+  .home-container {
+    @apply w-[50vw] min-h-[100vh] max-h-[100vh] p-16 flex flex-col justify-center;
+  }
 }
