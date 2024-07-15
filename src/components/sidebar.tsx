@@ -10,15 +10,17 @@ const sideBarElements = [
 
 interface SidebarProps {
   pageSetter: (index: number) => void;
+  activeIndex?: number;
 }
 
-const Sidebar = ({ pageSetter }: SidebarProps) => {
+const Sidebar = ({ pageSetter, activeIndex }: SidebarProps) => {
   return (
     <div className="sidebar">
       {sideBarElements.map((element, index) => (
         <SidebarIcon
           icon={element.icon}
           text={element.tooltip}
+          isactive={activeIndex === index}
           onClick={() => pageSetter(index)}
         />
       ))}
@@ -29,14 +31,19 @@ const Sidebar = ({ pageSetter }: SidebarProps) => {
 interface SidebarIconProps {
   icon: JSX.Element;
   text?: string;
+  isactive: boolean;
   onClick: () => void;
 }
 
-const SidebarIcon = ({ icon, text, onClick }: SidebarIconProps) => {
+const SidebarIcon = ({ icon, text, onClick, isactive }: SidebarIconProps) => {
   return (
     <>
       <div className="flex justify-center" onClick={onClick}>
-        <div className="sidebar-element group">
+        <div
+          className={`sidebar-element group ${
+            isactive ? "bg-tertiary" : "bg-secondary"
+          }`}
+        >
           <div
             className="
             transition-all
