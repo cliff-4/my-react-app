@@ -22,6 +22,7 @@ const Sidebar = ({ pageSetter, activeIndex }: SidebarProps) => {
           text={element.tooltip}
           isactive={activeIndex === index}
           onClick={() => pageSetter(index)}
+          key={index}
         />
       ))}
     </div>
@@ -33,6 +34,7 @@ interface SidebarIconProps {
   text?: string;
   isactive: boolean;
   onClick: () => void;
+  key: number;
 }
 
 const SidebarIcon = ({ icon, text, onClick, isactive }: SidebarIconProps) => {
