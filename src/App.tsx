@@ -1,13 +1,14 @@
 import { useState } from "react";
 import Sidebar from "./components/sidebar";
 import TodoList from "./components/TodoList";
+import DefaultPage from "./components/DefaultPage";
 
 function App() {
   const Pages = [
-    <div>Home page</div>,
+    <DefaultPage content={"Home page"} />,
     <TodoList />,
-    <div>Page 3</div>,
-    <div>Page 4</div>,
+    <DefaultPage content={"Page 3"} />,
+    <DefaultPage content={"Page 4"} />,
   ];
 
   const [pageIndex, setPageIndex] = useState(0);
