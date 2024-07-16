@@ -8,7 +8,13 @@ const Home = () => {
   return (
     <div className="flex flex-row justify-center min-h-screen">
       <FadeIn className="home-container text-pretty">
-        <span className="text-7xl font-mono text-quinternary pl-8 scroll-pb-6">
+        <span
+          className="
+          pl-8
+          text-7xl font-mono 
+          text-quinternary
+          "
+        >
           Who am I?
         </span>
         <div className="border-solid border-2 border-quinternary rounded-xl bg-quarternary">
