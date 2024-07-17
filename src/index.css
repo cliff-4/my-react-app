@@ -24,7 +24,8 @@
       transition-all duration-200 scale-0 origin-left;
   }
   .home-container {
-    @apply w-[50vw] min-h-[100vh] max-h-[100vh]
+    @apply md:w-[50vw] md:min-h-[100vh] md:max-h-[100vh]
     flex flex-col justify-center
+    md:p-4 lg:p-8;
   }
 }
