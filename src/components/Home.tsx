@@ -26,10 +26,11 @@ const Home = () => {
           </FadeIn>
         </div>
       </FadeIn>
-      <FadeIn delay="200" className="home-container">
+      <FadeIn delay="200" className="home-container py-0">
         <img
           className="
-          object-cover h-[80vh] lg:h-full p-8 sm:p-16 md:p-4 rounded-[8vh] -my-32
+          h-[80vh] lg:h-full md:p-4
+          object-cover rounded-[8vh]
           "
           src={ImgSrc}
           alt="Aditya Mishra"

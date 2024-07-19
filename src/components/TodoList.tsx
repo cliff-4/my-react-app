@@ -36,9 +36,9 @@ const TodoList: React.FC = () => {
   };
 
   return (
-    <div className="flex justify-center flex-row min-h-screen">
+    <div className="flex justify-center flex-row h-min">
       <div className="flex flex-col justify-start min-w-[50vh] max-w-[50vh]">
-        <FadeIn className="border-solid border-2 border-quinternary p-10 mt-[15vh] rounded-2xl bg-quarternary max-h-[70vh]">
+        <FadeIn className="border-solid border-2 border-quinternary p-10 mt-[15vh] rounded-2xl bg-quarternary max-h-[50vh]">
           <FadeIn
             delay="200"
             className="border-solid border-2 border-quinternary p-5 rounded-2xl bg-secondary flex flex-col"
