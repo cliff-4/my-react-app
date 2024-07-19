@@ -1,12 +1,4 @@
-import { FaHome } from "react-icons/fa";
-import { FaBarsProgress, FaListCheck } from "react-icons/fa6";
-
-const defaultIconSize = 24;
-const sideBarElements = [
-  { icon: <FaHome size={defaultIconSize} />, tooltip: "Home" },
-  { icon: <FaListCheck size={defaultIconSize} />, tooltip: "ToDo List" },
-  { icon: <FaBarsProgress size={defaultIconSize} />, tooltip: "TBD" },
-];
+import { Pages } from "../Pages";
 
 interface SidebarProps {
   pageSetter: (index: number) => void;
@@ -16,10 +8,10 @@ interface SidebarProps {
 const Sidebar = ({ pageSetter, activeIndex }: SidebarProps) => {
   return (
     <div className="sidebar">
-      {sideBarElements.map((element, index) => (
+      {Pages.map((page, index) => (
         <SidebarIcon
-          icon={element.icon}
-          text={element.tooltip}
+          icon={page.icon}
+          text={page.tooltip}
           isactive={activeIndex === index}
           onClick={() => pageSetter(index)}
           key={index}
