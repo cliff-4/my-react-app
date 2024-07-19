@@ -6,7 +6,13 @@ const Content: string =
 
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row justify-center min-h-screen">
+    <div
+      className="
+      flex flex-col md:flex-row justify-center
+      md:min-h-screen
+      pb-28 md:pb-0
+      "
+    >
       <FadeIn className="home-container text-pretty">
         <span
           className="

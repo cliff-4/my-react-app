@@ -32,7 +32,7 @@ interface SidebarIconProps {
 const SidebarIcon = ({ icon, text, onClick, isactive }: SidebarIconProps) => {
   return (
     <>
-      <div className="flex justify-center" onClick={onClick}>
+      <div className="flex justify-center grow md:grow-0" onClick={onClick}>
         <div
           className={`sidebar-element group ${
             isactive ? "bg-tertiary" : "bg-secondary"
