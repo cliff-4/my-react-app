@@ -1,7 +1,8 @@
 // Page components
+import DefaultPage from "./DefaultPage";
 import Home from "./Home";
 import TodoList from "./TodoList";
-import DefaultPage from "./DefaultPage";
+import Theme from "./Theme";
 // Icons for sidebar
 import { FaHome } from "react-icons/fa";
 import { FaListCheck, FaPaintbrush } from "react-icons/fa6";
@@ -19,7 +20,7 @@ export const Pages = [
     tooltip: "To-Do List",
   },
   {
-    view: <DefaultPage content={"Page 3"} />,
+    view: <Theme />,
     icon: <FaPaintbrush size="24" />,
     tooltip: "Themes",
   },
