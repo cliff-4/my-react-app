@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Sidebar from "./components/sidebar";
-import { Pages } from "./Pages";
+import { Pages } from "./components/Pages";
 
 function App() {
   const [pageIndex, setPageIndex] = useState(0);

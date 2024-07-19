@@ -1,4 +1,4 @@
-import { Pages } from "../Pages";
+import { Pages } from "./Pages";
 
 interface SidebarProps {
   pageSetter: (index: number) => void;

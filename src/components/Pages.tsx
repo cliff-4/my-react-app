@@ -1,7 +1,7 @@
 // Page components
-import Home from "./components/Home";
-import TodoList from "./components/TodoList";
-import DefaultPage from "./components/DefaultPage";
+import Home from "./Home";
+import TodoList from "./TodoList";
+import DefaultPage from "./DefaultPage";
 // Icons for sidebar
 import { FaHome } from "react-icons/fa";
 import { FaListCheck, FaPaintbrush } from "react-icons/fa6";
