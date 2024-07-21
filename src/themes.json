@@ -1,0 +1,21 @@
+{
+  "currTheme" : 0,
+  "allThemes" : [
+    {
+      "title": "Default",
+      "hexList": ["240115", "de3c4b", "87f5fb", "2f131e", "cec3c1"]
+    },
+    {
+      "title": "me.jpg",
+      "hexList": ["09017b", "8785d9", "03005b", "da9de6", "dddfed"]
+    },
+    {
+      "title": "Minimalist",
+      "hexList": ["d1bce3", "c49bbb", "a1867f", "585481", "19297c"]
+    },
+    {
+      "title": "Cute",
+      "hexList": ["070707", "40434e", "c297b8", "fdcff3", "de89be"]
+    }
+  ]
+}

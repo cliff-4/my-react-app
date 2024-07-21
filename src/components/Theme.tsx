@@ -1,23 +1,7 @@
 import FadeIn from "./FadeIn";
+import themesObject from "../themes.json";
 
-const themes = [
-  {
-    title: "Default",
-    hexList: ["240115", "de3c4b", "87f5fb", "2f131e", "cec3c1"], // the first one
-  },
-  {
-    title: "me.jpg",
-    hexList: ["09017b", "8785d9", "03005b", "da9de6", "dddfed"], // from me.jpg
-  },
-  {
-    title: "Minimalist",
-    hexList: ["d1bce3", "c49bbb", "a1867f", "585481", "19297c"],
-  },
-  {
-    title: "Cute",
-    hexList: ["070707", "40434e", "c297b8", "fdcff3", "de89be"],
-  },
-];
+const themes = themesObject.allThemes;
 
 function Theme() {
   return (
@@ -31,7 +15,13 @@ function Theme() {
       >
         {themes.map((theme, index) => (
           <FadeIn delay={`${200 * index}`} key={index}>
-            <ThemeCard title={theme.title} hexList={theme.hexList} />
+            <ThemeCard
+              title={theme.title}
+              hexList={theme.hexList}
+              onClick={() => {
+                SetTheme(index);
+              }}
+            />
           </FadeIn>
         ))}
       </div>
@@ -42,40 +32,41 @@ function Theme() {
 interface ThemeCardProps {
   title: string;
   hexList: string[];
+  onClick: () => void;
 }
 
-function ThemeCard({ title, hexList }: ThemeCardProps) {
+function ThemeCard({ title, hexList, onClick }: ThemeCardProps) {
   return (
     <>
       <div
         className="
         group
-        flex flex-col items-center
+        flex flex-col items-right
         max-w-fit
+        cursor-pointer
         "
-        onClick={() => {
-          SetTheme(hexList);
-        }}
+        onClick={onClick}
       >
         <span
           className="
           bg-secondary
-          px-4 pt-1
+          group-hover:translate-y-0 group-hover:scale-110
+          translate-y-3 
+          transition-all duration-200 ease-in-out
+          p-1
           text-center text-2xl font-mono font-bold
-          border-2 border-b-0 border-white
-          rounded-t-3xl
-          z-0 translate-y-1/4 group-hover:translate-y-0
-          transition-all duration-200 ease-out
+          border-2 border-white
+          rounded-lg
           "
         >
           {title}
         </span>
         <div
           className="
-          bg-secondary
+          bg-[#7e7e7e]
           p-4
-          flex flex-row -space-x-8 overflow-hidden
-          border-2 border-white rounded-3xl
+          flex flex-row overflow-hidden
+          border-2 border-white rounded-b-lg
           z-10
           "
         >
@@ -83,10 +74,10 @@ function ThemeCard({ title, hexList }: ThemeCardProps) {
             <div
               key={index}
               className="
+              first:rounded-l-lg last:rounded-r-lg
               group flex flex-col items-center justify-center
-              w-20 h-20 rounded-full
-              border-2 border-dashed hover:border-solid border-white
-              hover:scale-110 hover:z-20
+              w-20 h-20
+              hover:scale-125 hover:z-20 hover:rounded-lg
               transition-all duration-200 ease-out
               "
               style={{ backgroundColor: `#${hex}` }}
@@ -98,8 +89,8 @@ function ThemeCard({ title, hexList }: ThemeCardProps) {
   );
 }
 
-function SetTheme(hexList: string[]) {
-  localStorage.setItem("theme", hexList.join("")); // WiP
+function SetTheme(index: number) {
+  console.log(`Index: ${index}, WiP`);
 }
 
 export default Theme;
