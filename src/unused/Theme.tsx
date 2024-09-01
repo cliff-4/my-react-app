@@ -1,4 +1,4 @@
-import FadeIn from "./FadeIn";
+import FadeIn from "../components/FadeIn";
 import themesObject from "../themes.json";
 
 const themes = themesObject.allThemes;
