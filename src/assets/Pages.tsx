@@ -1,15 +1,14 @@
 // Page components
-// import DefaultPage from "../components/DefaultPage";
 import Home from "../components/Home";
 import Projects from "../components/Projects";
-// import TodoList from "../components/TodoList";
-import Theme from "../components/Theme";
+import SkillsPage from "../components/Skills";
+import DefaultPage from "../unused/DefaultPage";
+
 // Icons for sidebar
 import { FaHome } from "react-icons/fa";
 import { FaBriefcase } from "react-icons/fa6";
-// import { FaListCheck } from "react-icons/fa6";
-import { FaPaintbrush } from "react-icons/fa6";
-// import { GiHummingbird } from "react-icons/gi";
+import { FaPhone } from "react-icons/fa6";
+import { FaListCheck } from "react-icons/fa6";
 
 export const Pages = [
   {
@@ -18,23 +17,21 @@ export const Pages = [
     tooltip: "Home",
   },
   {
+    // add experience here itself
     view: <Projects />,
     icon: <FaBriefcase size="24" />,
     tooltip: "Projects",
   },
-  // {
-  //   view: <TodoList />,
-  //   icon: <FaListCheck size="24" />,
-  //   tooltip: "To-Do List",
-  // },
+
   {
-    view: <Theme />,
-    icon: <FaPaintbrush size="24" />,
-    tooltip: "Themes",
+    view: <SkillsPage />,
+    icon: <FaListCheck size="24" />,
+    tooltip: "Skills",
   },
-  // {
-  //   view: <DefaultPage content={"Page 4"} />,
-  //   icon: <GiHummingbird size="24" />,
-  //   tooltip: "Defauly tool-tip",
-  // },
+  {
+    // add resume here
+    view: <DefaultPage content={"Contact"} />,
+    icon: <FaPhone size="24" />,
+    tooltip: "Contact",
+  },
 ];
