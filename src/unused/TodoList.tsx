@@ -1,6 +1,6 @@
 import React, { useState, useEffect, KeyboardEvent } from "react";
 import { RxCrossCircled } from "react-icons/rx";
-import FadeIn from "./FadeIn";
+import FadeIn from "../components/FadeIn";
 
 interface Todo {
   text: string;
