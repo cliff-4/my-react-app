@@ -1,16 +1,19 @@
-import ProjectsList from "../assets/ProjectsData/data.json";
+import { ProjectsList } from "../assets/ProjectsList";
 
 const Projects = () => {
   return (
     <div
       className="
       min-w-full
-      p-32
+      min-h-screen
+      p-16
+      flex flex-col items-center
       "
     >
       <div
         className="
-        grid grid-cols-3 gap-4 place-items-center
+        grid grid-flow-row grid-cols-1 md:grid-cols-2 lg:grid-cols-3
+        gap-4 place-items-center justify-center w-full
         "
       >
         {ProjectsList.map((project) => (
@@ -27,25 +30,33 @@ const Projects = () => {
 
 interface ProjectCardProps {
   title: string;
-  description: string;
-  link: string;
+  description?: string;
+  link?: string;
 }
 
-const ProjectCard = ({ title, description, link }: ProjectCardProps) => {
+const ProjectCard = ({
+  title,
+  description = "",
+  link = "#",
+}: ProjectCardProps) => {
   return (
-    <div
-      className="
-      w-72 p-4
+    <a href={link}>
+      <div
+        className="
+      w-96 md:w-64
+      p-4
       border-2 border-white rounded-lg
       bg-quarternary text-quinternary font-sans
       hover:scale-110 hover:bg-blend-hue-rotate-180 hover:cursor-pointer
       transition-all duration-200
       "
-    >
-      <h1 className="text-2xl">{title}</h1>
-      <p>{description}</p>
-      <a href={"#"}>{link}</a>
-    </div>
+      >
+        <b>
+          <h1 className="text-2xl mb-1">{title}</h1>
+        </b>
+        <p>{description}</p>
+      </div>
+    </a>
   );
 };
 
