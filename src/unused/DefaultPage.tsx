@@ -1,5 +1,5 @@
 import { FaHouseChimneyWindow } from "react-icons/fa6";
-import FadeIn from "./FadeIn";
+import FadeIn from "../components/FadeIn";
 
 interface PageProps {
   content: string;
