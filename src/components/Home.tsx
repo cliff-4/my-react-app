@@ -2,13 +2,14 @@ import FadeIn from "./FadeIn";
 
 const ImgSrc: string = "/me.jpg";
 const Content: string =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo molestiae recusandae ipsam, consequuntur magnam neque placeat totam. Earum magni eveniet voluptates doloremque nulla, aperiam error quod corporis id, quisquam dolore.";
+  "Hello there! I am Aditya Mishra, a Physics student at the Indian Institute of Technology Kharagpur. I am a passionate programmer and tech enthusiast. I love to fiddle around with new technologies (one big example is the very website you see!) aaaand to spend countless hours to automate my teensy tasks, like a true OCD-haver. On most days I can be found sleeping, but once in a blue moon, when I wake up, I am found doom scrolling on Instagram (damn you Meta algorithm). Jokes aside, I love to work on developing softwares, high-performance data pipelines and generative AI projects. Please visit Projects page to learn more about my ventures!";
 
 const Home = () => {
   return (
     <div
       className="
       flex flex-col md:flex-row justify-center
+      md:ml-12
       md:min-h-screen
       pb-28 md:pb-0
       "
