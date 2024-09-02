@@ -2,7 +2,7 @@
 import Home from "../components/Home";
 import Projects from "../components/Projects";
 import SkillsPage from "../components/Skills";
-import DefaultPage from "../unused/DefaultPage";
+import ContactPage from "../components/Contact";
 
 // Icons for sidebar
 import { FaHome } from "react-icons/fa";
@@ -30,7 +30,7 @@ export const Pages = [
   },
   {
     // add resume here
-    view: <DefaultPage content={"Contact"} />,
+    view: <ContactPage />,
     icon: <FaPhone size="24" />,
     tooltip: "Contact",
   },
